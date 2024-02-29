@@ -1,0 +1,32 @@
+klasörden dosya silip depoda güncelleme:
+git rm silinecekdosya.txt     -> silinen dosyayı seç
+git status                    -> klasörü kontrol etme
+git commit -m "dosya silindi" -> dosya silme mesajı
+git push -u origin master     -> dosyayı git deposunda güncelleme
+
+
+klasörde yapılan değişiklikleri güncelleme:
+git add .                         -> tüm dosyaları yükle
+git commit -m "kayıt güncelleme"  -> kayıt güncelleme mesajı
+git push -u origin master         -> yapılan ekleme ve değişiklikleri depoya aktarma
+
+
+klasörü yeni bir git deposu oluşturma ve sanal ortama yükleme:
+git init                                                         -> projeyi açma ve git'i başlatma
+git status                                                       -> klasördeki dosyaları görüntüle
+git add .                                                        -> tüm dosyaları yükle
+git commit -m "ilk kayıtları güncelle"                           -> yapılan iş güncellemesi
+git remote add origin https://github.com/Ezelceyhun/github2.git  -> yerel depoyu uzak depo ile birleştirme
+git push -u origin master                                        -> yapılan ekleme ve değişiklikleri
+								    depoya aktarma
+
+
+git status                : klasördeki değişiklikleri gösterir
+git add                   : belirtilen dosyayı çalışma dizinine ekler commit etmeye hazır hale getirir
+git add . 	          : tüm dosyaları çalışma dizinine ekler commit etmeye hazır hale getirir
+git commit -m "mesaj"     : dizinde bekletilen değişiklikleri bir mesaj belirterek yükler
+git push -u origin master : klasörde yapılan değişiklikleri github'a gönderir
+git rm silinendosya.txt   : klasör içerisinde ki belirtilen dosyayı silmek için kullanılır
+git remote add origin     : yerel depoyu origin adıyla uzak depoya ekleme işlemidir
+git init                  : bilgisayarda oluşturulmuş klasörü GİT'e tanımlanması için kullanılır
+git log                   : yerel depodaki commit geçmişini görüntüler

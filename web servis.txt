@@ -1,0 +1,36 @@
+soab ve rest nedir
+
+web servis uzak veya farklı sistemler için kullanılır
+sosyal medya platformlarının hem mobilde hemde bilgisayarda aynı anda haberleşmesi
+örnek olarak gösterilebilir
+
+Soab (simple object access protocol) :
+yapısında 4 bölüm bulunmaktadır
+
+Envelope : servis istek ve cevaplarının bilgilerini içerir
+Header   : yetkilendirme ve soab ayarlarını barındırır
+Body     : metotla ilgili bilgi veya metotların sonuçları bulunur
+Fault    : istek sonucu var ise hata mesajı gösterir
+
+Rest (Representational State Transfer)
+
+istemci ve sunucu arasında text-xml-json-html gibi pek çok formatta veri taşıyarak
+uygulamaların haberleşmesini sağlar
+Not: rest standartlarına uygun yazılan web servislerine RESTful sevisler de denir.
+
+
+web server (ağ sunucusu):
+
+internet üzerinde bir web sitesinin yayınlanmasını ve barınmasını sağlayan sunuculardır
+
+Bilinen Bazı Barınma Yöntemleri:
+	co-location hizmeti           : fiziksel sunucu olup profesyonel veri merkezlerinde barınır
+	dedicated sunucu              : vds olarak da bilinir, sanal bi makinedir
+	paylaşımlı barındırma hizmeti : shared hosting, fiziksel bir sunucuyu birden çok kişi
+					ve web sitesi ile paylaşır. her kullanıcı için belirli
+					depolama alanları bulunur. birbiri ile iletişim kurmazlar
+
+Apache Web Server:
+
+çeşitli işletim sistemlerinde çalışan http protokolü üzerinde çalışır. web sayfalarını istemcilere 
+dağıtmak için kullanılır.
