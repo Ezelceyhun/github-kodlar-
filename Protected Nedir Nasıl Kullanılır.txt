@@ -1,0 +1,9 @@
+Protected Nedir?
+
+Protected: Bu şekilde tanımlanan öğe sadece tanımlandığı class'ın içinde ve o class'tn türetilmiş
+diğer class'ların içinde erişilebilir. Miras alınan sınıflarda kullanılır. Farklı projelerde
+olsa bile.
+
+Protected İnternal: Protected veya İnternal anlamına gelir.
+
+Private Protected: Protected ve İnternal anlamına gelir.

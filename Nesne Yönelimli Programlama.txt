@@ -1,0 +1,36 @@
+Nesne yönelimli programlama da sınıflardan nesne üretilip gerektiği zaman tüm
+programda değişiklik yapmak yerine ilgili nesneleri değiştirip düzenlemek 
+yeterli olacaktır.
+
+Nesne bir sınıf içerisinde gerçekleşir ve başka projelerde de kullanılır.
+Anlaşılabilir ve daha az kod için kullanılır aynı değişkenler tekrar etmez
+
+Sınıf Nedir?
+nesnelerin özelliklerini içinde barındırır.
+örneğin insan sınıfının göz,saç rengi,boyu gibi nesneler üretilir.
+
+Nesne Nedir?
+içinde veri tutabilen ve üzerinde işlem yapılabilen bileşenlerdir.
+nesne her uygulamada tekrar kullanılabilir. 4 Temel Özelliği Vardır.
+
+Özellikleri:
+
+	Soyutlama(Abstraction): sınıfta davranış ve özelliklerin tanımlanmasına denir. Araba
+rengi ve modeli özellik, hızlanması fren yapması davranışlarıdır.
+	
+	Kapsülleme(Encapsulation): Hangi özellik ve davranışın dışarıya sunulup sunulmayacağını
+belirtir. insan sınıfında yemek alışkanlığı 'private', isim soyisim 'public 
+yapılabilir.
+
+	Public: Herkesin kullanabileceği özellik ve davranışlardır.
+	Private: Sadece kendi sınıfında kullanılabilen özellik ve davranışlardır.
+	Protected: Sınıf içinde miras alınan alt sınıflar tarafından kullanılır.
+
+	Kalıtım (İnheritance): Sınıflar birbirinden türeyebilir. Alt sınıf üst sınıfın 
+özelliklerini alabilir. Örneğin araba ve bisiklet sınıfının hızı gibi özelliğini
+tekrar yazmak yerine bu özelliği olan bi sınıf oluşturup miras alınabilir.
+
+	Çok Biçimlilik(Polymorphism): Alt sınıfın üst sınıf gibi davranışlar göstermesi
+zorunluluğu yoktur. Alt sınıflar farklı davranışlar göstermesine 'Çok Biçimlilik'
+denir. Örneğin araba ve uçağın hareketi vardır fakat biri kara da biri hava da 
+hareket etmektedir.
