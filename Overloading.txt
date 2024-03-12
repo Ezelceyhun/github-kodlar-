@@ -1,0 +1,4 @@
+Method Overloading Nedir?
+
+Aşırı Yükleme. Aynı isimle parametre alarak kullanılan
+metotlara denir.
