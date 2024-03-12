@@ -3,6 +3,10 @@ Abstract Nedir?
 Abstract Class: Abstract sınıflar hem abstract hem normal
 sınıflara erişim sağlayabilir.Abstract sınıflar new ile 
 oluşturulamaz.
+Abstract classından miras alan classı new leyerek çağırıyoruz.
+
+	Class1 araba = new Car();
+
 Abstract sınıfları doğrudan erişemiyoruz sadece miras alan classlar
 ile kullanılabilir.
 
