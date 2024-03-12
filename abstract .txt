@@ -1,0 +1,11 @@
+Abstract Nedir?
+
+Abstract Class: Abstract sınıflar hem abstract hem normal
+sınıflara erişim sağlayabilir.Abstract sınıflar new ile 
+oluşturulamaz.
+Abstract sınıfları doğrudan erişemiyoruz sadece miras alan classlar
+ile kullanılabilir.
+
+Abstract Method: Sadece abstract sınıflar içerisinde kullanılır.
+Bu metotlar miras olarak kullanılabilir ancak override edilmesi
+gerekir.
