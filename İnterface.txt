@@ -1,0 +1,14 @@
+İnterface Nedir?
+
+İnterface içerisinde yanlızda metot ve tanımlama(property) bulunur. 
+Yanlızca uygulama class'ının içermesi gereken üyeleri implement ederiz.
+
+İnterface içerisinde ki metot ve properyler class içerisinde tanımlanmalıdır.
+
+Nesne türetilmez.
+
+Sadece metot ve propery  bulundurabilir.
+
+Default olarak abstract ve public erişim belirleyicisine sahiptir.
+
+Constructor içermez.

@@ -1,0 +1,8 @@
+Virtual Nedir?
+
+Birden çok class'ların aynı anlama gelen metodları varsa Virtual olarak
+tanımlarız.
+
+Kalıtım yoluyla aktarıldıkları sınıfların içerisinden override edilerek değiştirilebilir.
+
+Override edilmezse temel sınıf içerisinde tanımladıkları şekilde çalışır.

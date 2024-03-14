@@ -13,3 +13,17 @@ ile kullanılabilir.
 Abstract Method: Sadece abstract sınıflar içerisinde kullanılır.
 Bu metotlar miras olarak kullanılabilir ancak override edilmesi
 gerekir.
+
+Bu metotlar private olaran tanımlanamazlar. Private metotlar miras alınan classlar tarafından
+implement edilmedikleri için abstract yapısına ters düşer.
+
+Virtual olarak tanımlanamazlar. Her abstract metot bir virtual'dır. Abstract class'ın amacı 
+miras alındığı class da implemente edilmektir. 
+
+Static olarak tanımlanmazlar.
+
+Sadece gösterilmesi istenen bilgileri kullanıcıya göstermek amacıyla kullanılır.
+
+Abstract Class -> Nesne oluşturamaz. Bu class'a erişmek için başka sınıfın kalıtım olması gerekir.
+Abstract Metot -> Sadece abstract class içerisinde kullanılır. Metot içerisine birşey yazılmaz.
+Abstract class hem abstract metot hem de normal metotlara sahip olabilir.

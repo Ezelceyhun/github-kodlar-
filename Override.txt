@@ -1,0 +1,5 @@
+Override Nedir?
+
+Kalıtım sayesinde üst sınıftan alt sınıfa geçiş yapacak metot yapılarına denir.
+
+Metodu belirlerken override ve virtual anahtar sözcükleri kullanmamız gerekir.

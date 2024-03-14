@@ -1,0 +1,11 @@
+Polymorphism Nedir?
+
+Kalıtım veren sınıflarda oluştuduğumuz yapıları daha sonra değiştirip kullanmak
+istediğimizde kullanılır.
+
+Virtual ile işaretlenip, override ile kullanılır.
+
+Aynı isimde olmalarına rağmen farklı işlemlerin yer aldığı metot için kullanılır.
+
+Örnek olarak proje de hem HomePage hem de AllProducts formlarında aynı class ve metotlar farklı
+amaçlar için kullanılmaktadır.

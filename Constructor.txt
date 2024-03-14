@@ -3,3 +3,5 @@ Constructor Nedir?
 Yapıcı Metot ismi sınıf ismi ile aynı olmalıdır.
 Public, private, protected olabilir. Parametre alabilir.
 Geri dönüş tipi yoktur.
+
+İsmi sınıf ile aynı olmalıdır. Erişim belirleyicisi public, private ve protected olabilir.
