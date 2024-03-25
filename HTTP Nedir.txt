@@ -8,6 +8,8 @@ Sunucu bu isteği alır apachi veya IIS gibi web sunucu programları aracılığ
 HTTPS nedir?
 Kısaca bilgilerin şifrelenerek işlendiği güvenli arktarım protokolüdür. PC ve sunucu arasında 
 internet üzerinden transfer olan tüm verilerin okunamaz hale getirerek veri güvenliği sağlar.
+SSL ve TLS olarak karşımıza çıkmaktadır. Günümüz de SSL güvenli bir protokol olarak kabul edilmez ve tavsiye
+edilmez. TLS ise SSL'in daha gelişmiş bir sürümüdür.
 
 Nasıl Çalışır?
 
@@ -22,16 +24,13 @@ Sunucu isteği aldıktan sonra talep edilen kaynağı bulur ve gerekli işlemler
 işlemler.
 
 RESPONSE(yanıt):
-Sunucu talep edilen işlemi tamamladıktan sonra HTPP Yanıtı oluşturur. Yanıt, sunucunun yaptığı işlemlerin sonucunu
-içerir.
+Sunucu talep edilen işlemi tamamladıktan sonra HTPP Yanıtı oluşturur. Yanıt, sunucunun yaptığı işlemlerin 
+sonucunu içerir.
 
 İNTERNET ÜZERİNDE TRANSFER:
 Sunucu, oluşturulan yanıtı HTTP protokolü ile istemciye geri gönderir ve kullanıcının 
 görüntülemesini sağlar. HTTP'nin temel çalışma prensibini oluşturur. İstemci kaynak talep eder ve 
 sunucu bu talebi karşılar. Bu işlem sayesinde bilgi alışverişi sağlanır.
-
-
-
 
 
 Bir HTTP isteğinin anatomisi;

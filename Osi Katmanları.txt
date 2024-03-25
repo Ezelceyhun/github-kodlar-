@@ -1,0 +1,65 @@
+Osi Katmanları
+Network'u daha küçük parçalara bölüp yönetmemizi sağlar.
+Göndericinin verisi encapsulation işlemlerinden geçip 1-0 formuna geçer, alıcıya giderken ise
+de-encapsulation işlemlerinden geçerek veri alıcıya ulaşır.
+
+
+Fiziksel Katman:
+	Bu katman, verinin elektrik sinyalleri veya optik sinyaller gibi fiziksel formda iletimini
+sağlar. Veriyi bitler halinde taşır ve kablo, konektörler, fiziksel bağlantılar gibi donanım
+bileşenlerini kullanır. Bu katman, elektrik gerilimi seviyelerini, bağlantı pimlerini ver veri
+iletim hızını tanımlar.
+Örnek Protokoller: ETHERNET - USB - HDMI
+
+Veri Bağlantı Katmanı:
+	Ağdaki doğrudan komşu cihazlar arasında güvenilir bir bağlantı sağlar. Bu katman, veriyi
+çerçeveler halinde gruplandırır ve hata düzeltme mekkanizmasını kullanarak iletim hatası olasılığını
+azaltır. Ayrıca MAC adresleriyle cihazları tanımlar.
+Örnek Protokoller: ETHERNET - WİFİ
+
+Ağ Katmanı:
+	Bu katman farklı ağlardaki cihazlar arasında veri iletişimini sağlar ve IP adreslemesini
+kullanır. Veri paketlerini yönlendirirken en iyi rotayı seçmek için yönlendirme protokolleri 
+kullanır.
+Örnek Protololler: 
+		IP(Internet Protokol)
+		ICMP(Internet Control Message Protocol)
+		ARP(Address Resolution Protocol)
+
+Taşıma Katmanı:
+	Verinin kaynak ve hedef uygulamalar arasında güvenilir bir şekilde iletilmesinden
+sorumludur. Bu katman, veri akışını segmentlere böler, segmentlerin doğru sırayla teslim edilmesini
+sağlar ve hata düzeltme mekanizmalarını uygular. Ayrıca kaynak ve hedef uygulama arasında bağlantı
+kurma ve sonlandırma işlemlerini yönetir.
+Örnek Protokoller: 
+		TCP(Transmission Control Protocol)
+		UDP(User Datagram Protocol)
+
+Oturum Katmanı:
+	Ağdaki uygulamalar arasında iletişim oturumunu yönetir. Bu katman, oturum başlatma,
+oturum sürdürme ve oturum sonlandırma işlevlerini sağlar. Veri akışını senkronize eder, veri 
+parçalarını ayırır ve senkronizasyon hatalarını ele alır.
+Örnek Protokoller:
+		NetBIOS(Network Basic Input/Output System)
+		TLS(Transport Layer Security)
+
+Sunum Katmanı:
+	Verinin farklı formatlarda kodlanması, şifrelenmesi ve sıkıştırılmasını sağlar. Bu katman
+verinin uygulama katmanında kullanılabilir bir formata dönüştürülmesinden sorumludur. Veri
+sıkıştırma, veri şifreleme, veri format dönüşümü gibi işlemleri gerçekleştirir.
+Örnek Protokoller:
+		SSL(Secure Sockets Layer)
+		MIME(multipurpose Internet Mail Extensions)
+
+Uygulama Katmanı:
+	Kullanıcıların ağ sevislerine erişmesini sağlar. Bu katman kullanıcı uygulamarı arasında
+veri iletimini gerçekleştirir ve farklı uygulamalar arasında iletişim kurulmasını sağlar.
+Örneğin, e-posta,web tarayıcıları, dosya paylaşımı gibi uygulamalar bu katmanda çalışır.
+Örnek Protokoller:
+		HTTP(Hypertext Transfer Protocol)
+		FTP(File Transfer Protocol)
+		SMTP(Simple Mail Transfer Protocol)
+
+7 katmandan oluşan OSI modeli, ağ protokollerinin her bir katmanın belirli görevlerini yerine
+getirmesini ve birbirleriyle uyumlu bir şekilde çalışmasını sağlar. Her katman yanlızca altındaki
+katmanla doğrudan iletişim kurar ve veri iletimi, bu katmanlardan geçerek gerçekleşir.
