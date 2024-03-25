@@ -1,0 +1,137 @@
+HTTP Nedir?
+
+Http protokolü istemci (pc) tarafından sunucu arasındaki alışveriş kurallarını belirtir.
+80 portunu kullanır. 
+İstemci sunucuya bi istek gönderir, bu istek web tarayıcıları(google chrome) aracılığıyla iletilir.
+Sunucu bu isteği alır apachi veya IIS gibi web sunucu programları aracılığıyla cevap verir.
+
+HTTPS nedir?
+Kısaca bilgilerin şifrelenerek işlendiği güvenli arktarım protokolüdür. PC ve sunucu arasında 
+internet üzerinden transfer olan tüm verilerin okunamaz hale getirerek veri güvenliği sağlar.
+
+Nasıl Çalışır?
+
+Request(istek):
+Kullanıcı bir web sayfasını açmak, dosya indirmek yada form gönderme gibi bi işlem gerçekleştirdiğinde
+istemci bir HTTP isteği yapar. İstek, belirli bir kaynağı talep eden mesajdır. Bu mesaj isteğin
+türünü(GET,POST) ve talep edilen kaynağın adresini içerir.
+
+PROCESSİNG(işleme):
+Sunucu isteği aldıktan sonra talep edilen kaynağı bulur ve gerekli işlemleri gerçekleştirir.
+Örneğin:veritabanı sorguları, dosya okuma/yazma işlemleri veya dinamik içerik oluşturma gibi çeşitli
+işlemler.
+
+RESPONSE(yanıt):
+Sunucu talep edilen işlemi tamamladıktan sonra HTPP Yanıtı oluşturur. Yanıt, sunucunun yaptığı işlemlerin sonucunu
+içerir.
+
+İNTERNET ÜZERİNDE TRANSFER:
+Sunucu, oluşturulan yanıtı HTTP protokolü ile istemciye geri gönderir ve kullanıcının 
+görüntülemesini sağlar. HTTP'nin temel çalışma prensibini oluşturur. İstemci kaynak talep eder ve 
+sunucu bu talebi karşılar. Bu işlem sayesinde bilgi alışverişi sağlanır.
+
+
+
+
+
+Bir HTTP isteğinin anatomisi;
+
+	Method(zorunlu): GET
+	Host(zorunlu): www.google.com
+	Path(zorunlu): /search
+	HTTP version(zorunlu): HTTP/2
+	Headers(optional): Content-Type: application/json
+	Query String(optional): ?q=text
+	Body(optional): {"q": "test"}
+
+HTTP Methodları;
+
+GET: bu metod sunucudan veri almak için kullanılır. get metodun da sorgu metinleri url içerisinde
+gönderilebilir. Bu nedenle hassas istekler için get tavsiye edilmez.
+
+POST: Bu method ile sunucuya veri yazdırılabilir. İstek parametreleri hem url hemde mesaj
+gövdesinde gönderilebilir. Riskleri azaltmak ve engellemek için mesaj gövdesinin kullanımı tavsiye
+edilir.
+Tarayıcı da geri gidildiğinde post isteğinin tekrar göndermek isteyip istemediğimizi sorar. Bunun
+nedeni de bir işlemi yanlışlıkla birden fazla kez yapmayı engellemektir. Bu özellik ve günvelik
+nedeniyle bir işlem için post metodu önerilir.
+
+PUT: metod ile servis sağlayıcı üzerindeki bir kaynağı günceller. Hangi kaynak güncellenicekse o 
+kaynağın id'sini göndermek zorunludur.
+
+HEAD: get motoduna benzer ancak geri dönen yanıtta mesaj gövdesi bulunmaz(yani başlıklar ve 
+içerikleri get metodu ile aynıdır). Bu nedenle get mesajı gönderilmeden önce bir kaynağın var olup
+olmadığını kontrol etmek için kullanılabilir.
+
+DELETE: bu metod ile sunucuda ki herhangi bir veriyi silebilirsiniz.
+
+CONNECT: proxy sunucu üzerinden başka bir sunucuya bağlanmak ve proxy sunucuyu bir tünel gibi 
+kullanmak için kullanılır.
+
+OPTIONS: metod belli bir kaynak için kullanılabilecek HTTP metodlarını sunucudan sorgulamak
+için kullanılır.
+
+TRACE: teşhis amaçlı kullanılır. sunucu bu metodla gelen istek mesajının içeriğini aynen yanıt 
+gövdesinde geri göndermelidir.
+Bu yöntem sunucu ile istemci arasında bir vekil sunucu varsa bu sunucunun ve yaptığı 
+değişikliklerin tespiti mümkün olabilir.
+
+PATCH: metod bir kaynağa istediğiniz küçük çağlı değişimi yapmanızı sağlar.
+
+SEARCH: dizinin altındaki kaynakları sorgulamak için kullanılır.
+
+Genel Başlıklar
+Hep HTTP isteklerinde hem de yanıtlarında kullanılabilen başlıklardır.
+
+	Cache-Control: Sunucunun veya tarayıcının önbellekleme davranışını kontrol eder. no-cache
+ifadesi önbelleğe alınmaması gerektiğini belirtir.
+
+	Connection: İstemcinin, sunucu ile bağlantısının nasıl yönetileceğini belirler. keep-alive 
+ifadesi bağlantının birden çok istek için kullanılmasını sağlar.
+
+Request Başlıkları
+İstemci, bir veriyi sunucudan talep ederken isteği daha spesifik hale getirmek ve sunucuya ek bilgi
+sağlamak için kullanır.
+
+	GET/example HTTP/1.1: Bu kısım tarayıcının sunucudan veri talep ettiği GET isteğini temsil 
+eder.
+
+	Host: Sunucunun hangi domain adı veya IP adresi üzerinden erişileceğini belirtir.
+
+	Accept: İstemcinin kabul edebileceği içerik türünü belirler. 
+
+Response Başlıkları
+Sunucunun, bir isteğe yanıt olarak yanıtın durumu, tipi ve diğer özellikleri hakkında bilgi
+sağlamak için response başlıklarını kullanır.
+
+	HTTP/1.1 200 OK: Sunucunun isteği başarıyla karşıladğını ve içeriği ileteceğini belirten 
+yanıt durumudur.
+
+	Content-Type: Yanıtın içeriğinin türünü belirtir.
+
+Varlık Başlıkları
+
+İletilen varlıkların(dosya,metin,resim vb.) özelliklerini tanımlar.
+
+	Content-Type: Yanıtın içeriğinin türünü belirtir.
+	
+	Content-Language: Yanıtın içeriğinin dilini belirtir.
+
+Yetki ve Güvenlik Başlıkları
+
+İstemcinin ve sunucunun kimlik doğrulama, oturum yönetimi, şifreleme ve diğer güvenlik önlemleriyle
+ilgili bilgileri birbirine  ilettikleri başlıklardır.
+
+	Authorization: İstemcinin kimliğini doğrulamak için kullanılan bir yetkilendirme başlığıdır.
+
+	Strict-Transport-Security: Tarayıcının sadce HTTPS üzerinden güvenli bağlantıları  
+kabul etmesini sağlayan bir güvenlik önlemidir. max-age parametresi, tarayıcının bu kuralı ne
+kadar süreyle hatırlayacağını belirtir.
+
+HTTP Durum Kodları
+
+1xx --> Bilgi Durumları
+2xx --> Başarılı Durumlar
+3xx --> Yönlendirme Durumları
+4xx --> İstemci Hatası Durumları
+5xx --> Sunucu Hatası Durumları
