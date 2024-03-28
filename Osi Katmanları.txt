@@ -1,13 +1,17 @@
-Osi Katmanları
+OSI Nedir?
+İki ağ kuruluşu arasında kuraldır. OSI çeşitli üreticilerin ürünlerinin bağlanabileceği bir ağ için, bir sektor
+etkinliği olarak ortaya koymuştur.
+
+OSI Katmanları
 Network'u daha küçük parçalara bölüp yönetmemizi sağlar.
-Göndericinin verisi encapsulation işlemlerinden geçip 1-0 formuna geçer, alıcıya giderken ise
-de-encapsulation işlemlerinden geçerek veri alıcıya ulaşır.
+Göndericinin verisi encapsulation işlemlerinden(Uygulama katmanından Fiziksel katmana kadar) geçip 1-0 formuna geçer,
+alıcıya giderken ise de-encapsulation işlemlerinden(Fiziksel katmandan Uygulama katmanına) geçerek veri alıcıya ulaşır.
 
 
 Fiziksel Katman:
 	Bu katman, verinin elektrik sinyalleri veya optik sinyaller gibi fiziksel formda iletimini
 sağlar. Veriyi bitler halinde taşır ve kablo, konektörler, fiziksel bağlantılar gibi donanım
-bileşenlerini kullanır. Bu katman, elektrik gerilimi seviyelerini, bağlantı pimlerini ver veri
+bileşenlerini kullanır. Bu katman, elektrik gerilimi seviyelerini, bağlantı pimlerini ve veri
 iletim hızını tanımlar.
 Örnek Protokoller: ETHERNET - USB - HDMI
 
@@ -63,3 +67,27 @@ veri iletimini gerçekleştirir ve farklı uygulamalar arasında iletişim kurul
 7 katmandan oluşan OSI modeli, ağ protokollerinin her bir katmanın belirli görevlerini yerine
 getirmesini ve birbirleriyle uyumlu bir şekilde çalışmasını sağlar. Her katman yanlızca altındaki
 katmanla doğrudan iletişim kurar ve veri iletimi, bu katmanlardan geçerek gerçekleşir.
+
+
+Özet:
+
+OSI: Sistemlerin birbirleriyle haberleşmesini tanımlamak için kullanılır.
+
+Fiziksel Katman: Verinin içeriğiyle ilgilenmeden işaretin nasıl ileteciğini tanımlar.
+
+Veri Bağı Katmanı: Ağ katmanından gelen paketlerin hata kontrol bitlerini ekleyerek frame(çerçeve) halinde
+fiziksel katmana iletilmesinden sorumludur.
+
+Ağ Katmanı: Veri paket olarak isimlendirilir. Paketin farklı bir ağa yönlendirilmesi gerektiğinde router'lar tarafından
+ilgili ağa paketin iletilmesinden sorumludur. Ağ katmanında port bilgisi yoktur.
+
+Taşıma Katmanı: Verinin gönderilen kısımlarının doğru bir şekilde birleştirilmesinden sorumludur. Verinin güvenilir bir
+şekilde ulaştırılıp ulaştırılmadığını kontrol eder.
+
+Oturum Katmanı: Sistemler arasındaki bağlantının kurulması, işlenmesi ve sonlandırılmasını sağlar.
+
+Sunum Katmanı: Verinin istenilen formatta gösterilmesini sağlar. Kodlama dönüştürme şifreleme verinin sıkıştırılması
+gibi işlemler meydana gelir.
+
+Uygulama Katmanı: Kullanılan programların ağ tarafından birbirleriyle haberleşmesi için gerekli protokoller bulunur.
+Kullanıcıya en yakın katman olarak düşünülebilir.

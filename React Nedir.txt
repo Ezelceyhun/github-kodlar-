@@ -1,0 +1,12 @@
+Kullanıcı arayüzleri oluşturmak için Facebook tarafından geliştirilen bir Javascript kütüphanesidir.
+React bir web uygulamasının ön yüzünü yazmak için kullanılan kütüphanedir.
+Basitçe 3 yapısı vardır;
+
+COMPONENT:
+	Bir kod yapısının component içerisinde tanımalyıp ihtiyaca göre tekrar tekrar çağırma yapısı sunar.
+
+PROPS: 
+	2 veya daha fazla componentlerden veri taşınması props'lar sayesinde yapılır.
+
+STATE MANAGEMENT:
+	Veriyi tutup sayfalar refresh olsa bile saklamaya yarar.
