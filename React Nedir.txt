@@ -3,10 +3,40 @@ React bir web uygulamasının ön yüzünü yazmak için kullanılan kütüphane
 Basitçe 3 yapısı vardır;
 
 COMPONENT:
-	Bir kod yapısının component içerisinde tanımalyıp ihtiyaca göre tekrar tekrar çağırma yapısı sunar.
+	Bir kod yapısının component içerisinde tanımlayıp ihtiyaca göre tekrar tekrar çağırma yapısı sunar.
 
 PROPS: 
 	2 veya daha fazla componentlerden veri taşınması props'lar sayesinde yapılır.
 
 STATE MANAGEMENT:
 	Veriyi tutup sayfalar refresh olsa bile saklamaya yarar.
+
+Package.json : Proje hakkında bilgileri içeren dosyadır.
+	name: Proje Adı
+	version: Versiyon
+	description: Açıklama Bölümü
+	main: index.js
+	author: projeyi yazan kişi
+	licesce: projenin lisans adı
+
+Public Klasörü : Uygulama üzerinden ulaşılabilecek html,css,resim,js gibi dosyaların tutulduğu klasördür. Dışarıdan eklenecek css dosyalarını bu klasöre koyabiliriz.
+
+Node_Modules : bir veya birden fazla js dosyasına yazılmış değişken, fonksiyon ve nesne barındıran bir yapıdır. 
+Bu yapı sayesinde yazılan komutlar projeye dahil edilerek kullanılabilir.
+Yazılan modüller kendi kapsama alanına sahiptir ve genel kapsamda bulunan değerleri değiştirmez.
+3'e ayrılır;
+	Çekirdek Modüller
+	Yerel Modüller
+	Üçüncü Parti Modüller
+
+
+
+sayfaya bi buton ekle buton yeni bi sayfaya gitsin ve yeni sayfadaki butona basıp geri gelsin
+npm react export etme
+//node_modules nedir ne işe yarar
+//public klasörü nedir ne işe yarar
+//package.json nedir ne işe yarar
+
+
+sayfalar arası veri geçişi
+webserver istek atıp gelen data grafikte gösterilicek
