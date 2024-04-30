@@ -1,0 +1,17 @@
+Repository Desing Pattern Nedir?
+	
+	Yazılım geliştirmede kullanılan, Data Source ile uygulama arasında aracı görevi gören yapısal bir tasarım desenidir.
+	
+	Repository tasarım deseni genellikle veri kaynağında CRUD işlemlerini gerçekleştirmek için gereken metotları içerir (Create, Read, Update, Delete).
+
+Avantajları Nelerdir?
+	
+	Kod yapısının kalanını etkilemeden değişiklik yapmaya imkan sağlar.
+	Temiz ve sürdürülebilir kod yapısına katkı sağlar.
+	Yeniden kullanılabilir veri erişim metotları sağlar ve kod tekrarını azaltır.
+
+Dezavantajları Nelerdir?
+	
+	Basit uygulamalarda repository desing pattern kullanımı gereksiz karmaşıklık yaratabilir.
+	Doğru şekilde uygulanmaması performans problemlerine sebep olabilir.
+	

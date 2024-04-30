@@ -1,0 +1,71 @@
+advapi32.dll kullandık çünkü windows credentials process kullandık.
+
+Credential yapısı:
+
+Credential Manager ile etkileşimde kullanılan kimlik bilgilerini temsil eder.
+İçeriği Nedir?
+	Flags: Kimlik bilgisiyle ilişkili bayrakları belirtir.
+	Type: kimlik bilgisinin türünü belirtir.
+	TargetName: Kimlik bilgisinin hedefini belirtir.
+	Comment: Kimlik bilgisi hakkında bir açıklama içerir.
+	LastWritten: Kimlik bilgisinin en son yazıldığı zamanı temsil eder.
+	CredentialBlobSize: Kimlik bilgisinin boyutunu belirtir.
+	CredentialBlob: Kimlik bilgisini içeren bayt dizisi.
+	Persist: Kimlik bilgisinin kalıcılığını belirtir.
+	AttributeCount: Kimlik bilgisine ilişkin öznitelik sayısını belirtir.
+	Attributes: Kimlik bilgisine ilişkin öznitelikleri içeren bir işaretçi.
+	TargetAlias: Kimlik bilgisinin hedefine bir alternatif ad belirtir.
+	UserName: Kimlik bilgisinin kullnıcı adını belirtir.
+
+
+CredentialType : uint 
+Credential yapısının bir parçası olarak kullanılan bir numaralandırma türüdür.
+İçeriği Nedir?
+	Generic: Genel bir kimlik bilgisi türünü temsil eder.
+	DomainPassword: Bir etki alanı parolası türünü temsil eder.
+	DomainCertificate: Bir etki alanı sertifikası türünü temsil eder.
+	DomainVisiblePassword: Bir etki alanı görünür parolası türünü temsil eder.
+	GenericCertificate: Genel bir sertifika türünü temsil eder.
+
+
+ if(CredRead("CreateLogin", CredentialType.Generic, 0, out credPointer))
+	CredRead: Belirli bir hedef adıyla ilişkilendirilmiş bir kimlik bilgisini almak için kullanılır.
+	int reservedFlag: Bu parametre kullanılmıyor ve 0.
+	out credPointer: Kimlik bilgisi bulunduğunda bu bilgiyi döndürmek için kullanılır.
+
+
+Credential credential = new Credential
+Kimlik bilgisi eklemek için kullanılır.
+İçeriği Nedir?
+	TargetName: Kimlik bilgisinin hedef adını belirtir.
+	Persist: Kimlik bilgisinin kalıcılığını belirtir. 1 değeri kalıcı olarak depolanacağını belirtir.
+
+private bool RememberMe
+	Kullanıcının 'Remember Me' seçeneğini işaretleyip işaretlemediğini belirlemek için kullanılır.
+
+
+[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+	LayoutKind.Sequential: Yapı elemanlarının bellekte sıralı olarak düzenleneceğini belirtir.
+	CharSet.Unicode: Karakter kümesini belirtir.
+
+
+[DllImport("advapi32.dll")]
+public static extern bool CredFree(IntPtr buffer);
+	CreedFree işlevin .dll'den çağrılacağı belirtiliyor.
+	Geri dönüş değerinin bool türünde olduğunu ve IntPtr türünde parametre aldığını gösterir.
+Kısaca:
+	Credential Manager tarafından yönetilen bellek bloklarını serbest bırakmak için gerekli olan CredFree işlevini çağırır.
+
+
+[DllImport("advapi32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+public static extern bool CredRead(string target, CredentialType type, int reservedFlag, out IntPtr CredentialPtr);
+	Credential Manager'da saklanan bir kimlik bilgisini okumak için kullanılır.
+
+
+[DllImport("advapi32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+public static extern bool CredWrite(ref Credential userCredential, uint flags);
+	Credential Manager'a yeni bir kimlik bilgi eklemek veya mevcut bir kimlik bilgisini güncellemek için kullanılır.
+	ref Credential userCredential: Yapı içerisindeki kimlik bilgisini temsil eder.
+	uint flags: İşlemi kontrol etmek için kullanılan bayrakları belirtir.
+
+extern: Dll'den bir işlevin tanımlanmasını ifade eder.
